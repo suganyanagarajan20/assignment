@@ -1,0 +1,20 @@
+create database clientmanagement;
+
+use clientmanagement;
+
+CREATE TABLE ClientCreation(clientid INT NOT NULL, clientname VARCHAR(50) NOT NULL,cemail VARCHAR(100),caddress VARCHAR(100), PRIMARY KEY(Clientid));
+
+insert into ClientCreation values(1,'Rahul','rahul@gmail.com','14, ABC street, Chennai'); 
+insert into ClientCreation values(2,'Rani','rani@gmail.com','13, ABC street, Mumbai'); 
+insert into ClientCreation values(3,'Raju','raju@gmail.com','15, ABC street, Mumbai'); 
+insert into ClientCreation values(4,'Renu','renu@gmail.com','15, ABC street, Chennai');
+
+commit; 
+
+CREATE TABLE ClientMeeting(meetingid INT NOT NULL,clientid INT NOT NULL,m_topic VARCHAR(100),no_of_people INT,start_time DATETIME,PRIMARY KEY(meetingid));
+
+insert into clientmeeting values(100,1,'DevOps',2,'2022-06-09 13:00:00');
+insert into clientmeeting values(101,2,'DevOps',2,'2022-06-09 13:00:00');
+insert into clientmeeting values(102,3,'Fullstack',2,'2022-06-09 13:00:00');
+
+commit;
